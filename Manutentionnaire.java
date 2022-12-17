@@ -31,7 +31,10 @@ public class Manutentionnaire extends Employee{
 	}
 	
 	public double salaire() {
-		return salaireDeBase + baseHoraire * nb_Heures;
+			for (int i = 0; i < anneeancien; i++) {
+				salaireDeBase = salaireDeBase + salaireDeBase * 0.05;				
+			}
+			return salaireDeBase + baseHoraire * nb_Heures;
 	}	
 
 }
